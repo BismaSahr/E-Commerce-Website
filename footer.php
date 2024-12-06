@@ -1,15 +1,44 @@
 <?php
-// Include database connection
-include 'connection.php';
 
+include 'connection.php';
+//Lgo Fetching
+$logo = "SELECT * FROM site_info WHERE id = 1 LIMIT 1";
+$logoresult= $conn->query($logo);
+$logoPath = ''; 
+if ($logoresult) {
+    $row1 = $logoresult->fetch_assoc();
+    $logoPath = $row1['logo_path']; 
+}
+
+//Fetching Main Items
+$MainitemQuery = "SELECT * FROM footer_main_items";
+$MainitemResult = $conn->query($MainitemQuery);
+
+if ($MainitemResult->num_rows > 0) {
+    $contactus = $customers = $company = null;
+
+    while ($row2 = $MainitemResult->fetch_assoc()) {
+        if ($row2['id'] === '1' ) {
+            $contactus = $row2['name']; 
+        } elseif ($row2['id'] === '2') {
+            $customers = $row2['name'];
+        } elseif ($row2['id'] === '3') {
+            $company = $row2['name'];
+        }
+    }
+} else {
+    echo "No data found in footer_main_items.";
+}
+
+//Fetching Sub items
 $query = "SELECT * FROM footer_items";
 $result = $conn->query($query);
 
-// Check if the query returned any rows
+
 if ($result->num_rows > 0) {
-    // Store the fetched data in an associative array
+  
     while ($row = $result->fetch_assoc()) {
-        $footer_items[] = $row;  // Store each row in the footer_items array
+        $footer_items[] = $row; 
     }
 } else {
     echo "No footer items found.";
@@ -37,37 +66,38 @@ if ($result->num_rows > 0) {
 <footer class="custom-bg text-white py-5">
     <div class="container">
         <div class="row">
-            <!-- Logo Section -->
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-center text-lg-start">
-                <a href="#">
-                    <img src="MyImages/LogoImages/Brandlogo.jpg" alt="Logo" class="logo img-fluid mb-3">
+                <a href="<?php echo $logoPath ; ?>">
+                    <img src="<?php echo $logoPath ; ?>" alt="Logo" class="logo img-fluid mb-3">
                 </a>
             </div>
 
-            <!-- Contact Us Section -->
+           
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <h5 class="text-uppercase">Contact Us</h5>
+                <h5 class="text-uppercase"><?php echo $contactus ; ?></h5>
                 <ul class="list-unstyled">
                     <?php
-                    // Display contact information
+                 
                     foreach ($footer_items as $item) {
-                        if ($item['description'] == 'Contact_US') {
+                        if ($item['link'] == 'emailus.php') {
+                            echo "<li><a href='" . $item['name'] . "' class='text-white text-decoration-none'>" . $item['name'] . "</a></li>";
+                        }
+                        elseif ($item['main_item_id'] === '1') {
                             echo "<li>" . $item['link'] . "</li>";
                         }
                     }
                     ?>
-                    <li><a href="contactus" class="text-white text-decoration-none">Email Us</a></li>
+                    <!-- <li><a href="contactus" class="text-white text-decoration-none">Email Us</a></li> -->
                 </ul>
             </div>
 
-            <!-- Customers Section -->
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <h5 class="text-uppercase">Customers</h5>
+                <h5 class="text-uppercase"><?php echo $customers; ?></h5>
                 <ul class="list-unstyled">
                     <?php
-                    // Display customer-related links
+                  
                     foreach ($footer_items as $item) {
-                        if ($item['description'] == 'Customers') {
+                        if ($item['main_item_id'] === '2') {
                             echo "<li><a href='" . $item['link'] . "' class='text-white text-decoration-none'>" . $item['name'] . "</a></li>";
                         }
                     }
@@ -75,15 +105,14 @@ if ($result->num_rows > 0) {
                 </ul>
             </div>
 
-            <!-- Company Section -->
             <div class="col-lg-3 col-md-6">
-             <h5 class="text-uppercase">Company</h5>
+             <h5 class="text-uppercase"><?php echo $company ; ?></h5>
              <ul class="list-unstyled">
                  <?php
         
                    foreach ($footer_items as $item) {
            
-                   if (strtolower(trim($item['description'])) == 'company') {
+                   if (strtolower(trim($item['main_item_id'])) === '3') {
                    echo "<li><a href='" . $item['link'] . "' class='text-white text-decoration-none'>" . $item['name'] . "</a></li>";
                   }
                   }
@@ -93,10 +122,10 @@ if ($result->num_rows > 0) {
 
         </div>
 
-        <!-- Divider -->
+    
         <hr class="my-4 bg-light">
 
-        <!-- Bottom Section -->
+  
         <div class="row">
             <div class="col text-center">
                 <p class="mb-0"> <?php 
