@@ -2,7 +2,6 @@
 include 'connection.php'; 
 //Logo fetching from DataBase
 $sql = "SELECT * FROM site_info WHERE id = 1 LIMIT 1";
-// $sql = "SELECT site_name FROM site_info WHERE id = 1 LIMIT 1";
 $result = $conn->query($sql);
 
 $logoPath = ''; 
