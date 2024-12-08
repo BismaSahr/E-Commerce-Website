@@ -1,234 +1,297 @@
-<?php
+<?php 
 require_once 'header.php';
-
 ?>
+<link rel="stylesheet" href="cart.css">
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="..." alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
- <h1>Women</h1>
-<div class="card-deck mt-5">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
+<h1>Women</h1>
+<div class="container">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="cardhover card-img-top" src="MyImages/women/ALLURE.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">ALLURE by edenrobe</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-  </div>
+        <!-- Card 2 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\bloom.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Bloom by J.</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <!-- Card 3 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\Bohemia.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Bohemia by SAPHHIRE</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\DELILL.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Delillah by BONANZA SATRANGI</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-    
-  </div>
 </div>
 
+<!-- cointainer  2 -->
+<div class="container">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\epic_5.2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">epic by ideas</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-<div class="card-deck mt-5">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
+        <!-- Card 2 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\humayun.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">humayunStar by J.</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-  </div>
+        <!-- Card 3 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\Innocens.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Innocens by edenrobe</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <!-- Card 4 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\Stolen_Moment.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Stolen Moment by Khaadi</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-    
-  </div>
 </div>
 
+<!-- container3 -->
+<div class="container">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\Natanji_Queen.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Natanji Queen by Khaadi</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-<div class="card-deck mt-5">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
+        <!-- Card 2 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\MIAMOR.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">MIAMOR by BONANZA SATRANGI</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-  </div>
+        <!-- Card 3 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\Elettra.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Elettra by ideas</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <!-- Card 4 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\velvet.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Velvet by ideas</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-    
-  </div>
 </div>
 
+<!-- container 4 -->
+<div class="container">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\NightFall.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">NightFall by BONANZA SATRANGI</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
+        <!-- Card 2 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\POEM1.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">POEM by SAPPHIRE</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
+        <!-- Card 3 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\pour-femme.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Pour-femme by J.</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-<div class="card-deck mt-5">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <!-- Card 4 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\spring_2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Spring by ideas</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-
-  </div>
-
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-    
-  </div>
 </div>
 
-<div class="card-deck mt-5">
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
+<!-- container 5 -->
 
-  </div>
+<div class="container">
+    <div class="row">
+        <!-- Card 1 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\stardom_2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Stardom by ideas</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
 
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <!-- Card 2 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\TEMPTING.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Tempting by edenrobe</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\uroosa.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Uroosa Noir by J.</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-6 col-md-3 mb-3 d-flex">
+            <div class="card custom-bg text-white d-flex flex-column">
+                <img class="card-img-top" src="MyImages\women\Wild.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Wild Bose by SAPPHIRE</h5>
+                    <p class="card-text">Bachat.pk</p>
+                    <p class="card-text font-weight-bold">Rs.3000</p>
+                    <button type="submit" class="button text-white">Add to cart</button>
+                </div>
+            </div>
+        </div>
     </div>
-    
-  </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>    
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <?php
 require_once 'footer.php';
 ?>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
