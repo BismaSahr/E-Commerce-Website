@@ -1,14 +1,7 @@
 <?php
 
 include 'connection.php';
-//Lgo Fetching
-$logo = "SELECT * FROM site_info WHERE id = 1 LIMIT 1";
-$logoresult= $conn->query($logo);
-$logoPath = ''; 
-if ($logoresult) {
-    $row1 = $logoresult->fetch_assoc();
-    $logoPath = $row1['logo_path']; 
-}
+require_once 'site.php';
 
 //Fetching Main Items
 $MainitemQuery = "SELECT * FROM footer_main_items";
@@ -79,8 +72,8 @@ if ($result->num_rows > 0) {
                     <?php
                  
                     foreach ($footer_items as $item) {
-                        if ($item['link'] == 'emailus.php') {
-                            echo "<li><a href='" . $item['name'] . "' class='text-white text-decoration-none'>" . $item['name'] . "</a></li>";
+                        if ($item['link'] === 'emailus.php') {
+                            echo "<li><a href='" . $item['link'] . "' class='text-white text-decoration-none'>" . $item['name'] . "</a></li>";
                         }
                         elseif ($item['main_item_id'] === '1') {
                             echo "<li>" . $item['link'] . "</li>";

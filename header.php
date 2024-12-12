@@ -1,16 +1,7 @@
 <?php
 include 'connection.php'; 
-//Logo fetching from DataBase
-$sql = "SELECT * FROM site_info WHERE id = 1 LIMIT 1";
-$result = $conn->query($sql);
+require_once 'site.php';
 
-$logoPath = ''; 
-
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $logoPath = $row['logo_path']; 
-    $BrandName = $row['site_name']; 
-}
 
 //Navbar Items fetching from DataBase
 $query = "SELECT * FROM navbar_items WHERE status = 'active'"; 
@@ -34,12 +25,14 @@ $categories = $conn->query($category_query);
 
       button:focus, input:focus, .btn:focus, .form-control:focus{
        outline: none !important;  
-       box-shadow: none  
+       box-shadow: none  !important;
       }
       .dropdown-menu .dropdown-item:hover {
         background-color:#320B56 !important;
         color: white !important; 
       }
+
+      
     </style>
 
 
@@ -48,7 +41,7 @@ $categories = $conn->query($category_query);
 <body>
 
     <header>
-      <div class="custom-bg d-flex justify-content-center bg-info text-white" style="height:60px;"><h1 class="mt-2"><?php echo $BrandName; ?></h1></div>
+      <div class="custom-bg d-flex justify-content-center bg-info text-white" style="height:60px;"><h1 class="mt-2"><?php echo $site_name; ?></h1></div>
       <nav class="custom-bg navbar navbar-expand-lg navbar-dark bg-dark pr-4 pl-1 pb-2 pt-4">
         <a class="navbar-brand" href="<?php echo $logoPath; ?>">
           <img class="logo" src="<?php echo $logoPath; ?>" alt="">
@@ -79,21 +72,25 @@ $categories = $conn->query($category_query);
             <?php endwhile; ?>
         </ul>
 
-          <form class="form-inline my-2 my-lg-0">
+          <form action="search.php" method="GET" class="form-inline my-2 my-lg-0">
               <button class="btn text-white" type="button" data-bs-toggle="collapse" data-bs-target="#searchField" aria-expanded="false" aria-controls="searchField">
                   <i class="fas fa-search"></i> 
               </button>
       
               <div class="collapse mr-2" id="searchField">
-                  <input type="text" class="form-control" placeholder="Search Product" id="searchInput">
+                  <input type="text" name="q" class="form-control" placeholder="Search Product" id="searchInput">
               </div>
-              <button type="button" class="btn text-white"><i class="fas fa-user"></i><span class="ml-2">Account</span></button>
-         
           </form>
+          <a href="cart.php">
+          <button type="button" class="btn text-white"><i class="fas fa-cart-shopping"></i><span class=""></span></button>
+          </a>
+          <a href="login.php">
+          <button type="button" class="btn text-white"><i class="fas fa-user"></i><span class="ml-2">Account</span></button>
+          </a>
         </div>
       </nav>
     </header>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>    
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<?php
+include 'javascriptlink.html';
+?>
