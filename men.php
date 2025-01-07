@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once 'header.php';
 require_once 'connection.php'; 
 require_once 'site.php';
@@ -49,15 +50,13 @@ if ($productResult) {
     <div class="row">
         <?php foreach ($products as $product): ?>
         <div class="col-6 col-md-3 mb-3 d-flex">
-            <div class="card custom-bg text-white d-flex flex-column">
+            <div class=" card d-flex flex-column" style="border:none;">
                 <a href="productdetail.php?detail_id=<?php echo htmlspecialchars($product['id'])?>" >
-                <img class="card-img-top" src="<?php echo htmlspecialchars($product['image_path']); ?>" alt="<?php echo htmlspecialchars($product['product_name']); ?>">
+                <img class="card-img-top h-0" src="<?php echo htmlspecialchars($product['image_path']); ?>" alt="<?php echo htmlspecialchars($product['product_name']); ?>">
                 </a>
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo htmlspecialchars($product['product_name']." by ".$product['brand_name']); ?></h5>
-                    <p class="card-text"><?php echo htmlspecialchars($site_name); ?></p>
-                    <p class="card-text font-weight-bold">Rs.<?php echo htmlspecialchars($product['price']); ?></p>
-                    <button type="submit" class="button text-white">Add to cart</button>
+                <div class="card-body " >
+                    <h5 class="card-title mb-0 h-0"><?php echo htmlspecialchars($product['product_name']." by ".$product['brand_name']); ?></h5>
+                    <p class="card-text mb-0 h-0">Rs.<?php echo htmlspecialchars($product['price']); ?></p>
                 </div>
             </div>
         </div>

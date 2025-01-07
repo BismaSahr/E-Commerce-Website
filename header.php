@@ -1,4 +1,5 @@
 <?php
+// session_start();
 include 'connection.php'; 
 require_once 'site.php';
 
@@ -10,6 +11,10 @@ $main_items = $conn->query($query);
 //Category List fetching from DataBase
 $category_query = "SELECT * FROM categories WHERE status = 'active' ORDER BY position";
 $categories = $conn->query($category_query);
+
+$quantity = isset($_SESSION['total_items']) ? $_SESSION['total_items'] : 0;
+
+
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +48,7 @@ $categories = $conn->query($category_query);
     <header>
       <div class="custom-bg d-flex justify-content-center bg-info text-white" style="height:60px;"><h1 class="mt-2"><?php echo $site_name; ?></h1></div>
       <nav class="custom-bg navbar navbar-expand-lg navbar-dark bg-dark pr-4 pl-1 pb-2 pt-4">
-        <a class="navbar-brand" href="<?php echo $logoPath; ?>">
+        <a class="navbar-brand" href="index.php">
           <img class="logo" src="<?php echo $logoPath; ?>" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,9 +86,18 @@ $categories = $conn->query($category_query);
                   <input type="text" name="q" class="form-control" placeholder="Search Product" id="searchInput">
               </div>
           </form>
-          <a href="cart.php">
-          <button type="button" class="btn text-white"><i class="fas fa-cart-shopping"></i><span class=""></span></button>
+         
+            <a href="cart.php" class="position-relative d-inline-block">
+              <button type="button" class="btn text-white">
+                  <i class="fas fa-cart-shopping"></i>
+              </button>
+              <span class="text-white position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" 
+                    style="font-size: 12px; transform: translate(-90%, -10%);">
+                  <?php echo $quantity; ?>
+              </span>
           </a>
+       
+
           <a href="login.php">
           <button type="button" class="btn text-white"><i class="fas fa-user"></i><span class="ml-2">Account</span></button>
           </a>

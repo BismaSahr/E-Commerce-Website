@@ -60,7 +60,7 @@ if ($result->num_rows > 0) {
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 text-center text-lg-start">
-                <a href="<?php echo $logoPath ; ?>">
+                <a href="index.php">
                     <img src="<?php echo $logoPath ; ?>" alt="Logo" class="logo img-fluid mb-3">
                 </a>
             </div>
@@ -72,7 +72,7 @@ if ($result->num_rows > 0) {
                     <?php
                  
                     foreach ($footer_items as $item) {
-                        if ($item['link'] === 'emailus.php') {
+                        if ($item['link'] === 'contact.php') {
                             echo "<li><a href='" . $item['link'] . "' class='text-white text-decoration-none'>" . $item['name'] . "</a></li>";
                         }
                         elseif ($item['main_item_id'] === '1') {
