@@ -3,22 +3,29 @@ session_start();
 require_once 'header.php';
 require_once 'connection.php';
 
-// Fetch the content and image 
-$query = "SELECT content, image_path FROM about_us LIMIT 1";  
-$result = mysqli_query($conn, $query);
+$aboutContent = "Content not available.";
+$aboutImage = "MyImages/about/about.jpg";
 
-if ($result) {
-    $row = mysqli_fetch_assoc($result);
-    $aboutContent = $row['content'];
-    $aboutImage = $row['image_path'];
+
+$query = "SELECT content, image_path FROM about_us LIMIT 1";  
+
+if ($stmt = $conn->prepare($query)) {
+    $stmt->execute();
+    $stmt->bind_result($content, $imagePath);
+
+    if ($stmt->fetch()) {
+        $aboutContent = $content;
+        $aboutImage = $imagePath;
+    }
+    $stmt->close();
 } else {
-    $aboutContent = "Content not available.";
-    $aboutImage = "MyImages/about/about.jpg"; 
+    error_log("Query preparation failed: " . $conn->error);
 }
 
-$aboutContent = str_replace("Bachat.pk", "<a href='index.php' style='color:#320B56; font-weight: bold;'>Bachat.pk</a>", $aboutContent);
 
+$aboutContent = str_replace("Bachat.pk", "<a href='index.php' style='color:#320B56; font-weight: bold;'>Bachat.pk</a>", $aboutContent);
 ?>
+
 
 <style>
     body, html {

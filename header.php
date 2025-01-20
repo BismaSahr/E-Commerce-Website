@@ -91,8 +91,8 @@ $quantity = isset($_SESSION['total_items']) ? $_SESSION['total_items'] : 0;
               <button type="button" class="btn text-white">
                   <i class="fas fa-cart-shopping"></i>
               </button>
-              <span class="text-white position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" 
-                    style="font-size: 12px; transform: translate(-90%, -10%);">
+              <span class="text-white position-absolute top-0 start-100 translate-middle badge rounded-pill" 
+                    style="font-size: 10px; transform: translate(-90%, -10%); height: 15px; background-color: #320B56">
                   <?php echo $quantity; ?>
               </span>
           </a>

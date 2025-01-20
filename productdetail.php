@@ -705,10 +705,10 @@ $stmt_avg->close();
         }
     });
 });
+
 //Add to Cart
 
 function addToCart(product_id, product_name, image_path) {
-    // Make an AJAX request to add the product to the cart
     const quantity = document.getElementById('quantity').value;
     if (quantity <= 0) {
         alert('Please select a valid quantity');
@@ -716,15 +716,14 @@ function addToCart(product_id, product_name, image_path) {
     }
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'cart.php', true); // Modify the URL as needed
+    xhr.open('POST', 'cart.php', true); 
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     
-    // Send product details to the server
+
     xhr.send(`product_id=${product_id}&quantity=${quantity}`);
 
     xhr.onload = function() {
         if (xhr.status === 200) {
-            // If the request was successful, show the modal
             document.getElementById('modalProductName').textContent = product_name;
             document.getElementById('addToCartModal').style.display = 'block';
         } else {

@@ -3,11 +3,15 @@ session_start();
 require_once 'header.php';
 require_once 'connection.php';
 
-$is_logged_in = isset($_SESSION['user_id']);
-$user_id = $is_logged_in ? $_SESSION['user_id'] : null;
+if (isset($_SESSION['user_id'])) {
+    $is_logged_in = true;
+    $user_id = $_SESSION['user_id'];
+} else {
+    $is_logged_in = false;
+    $user_id = null;
+}
 $total_items = 0;
 
-// Migrate session cart items to database when a user logs in
 if ($is_logged_in && isset($_SESSION['cart'])) {
     foreach ($_SESSION['cart'] as $product_id => $item) {
         $quantity = $item['quantity'];
@@ -95,7 +99,7 @@ if ($is_logged_in) {
         foreach ($_SESSION['cart'] as $product_id => $item) {
             
             $cart_items[] = $item;
-            $total_items += $item['quantity'];
+            $total_items = count($_SESSION['cart']);
         }
     }
 }
